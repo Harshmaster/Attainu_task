@@ -30,7 +30,7 @@ If running on localhost:
 
 1. Send a PATCH request to `http://localhost:3000/applyPatch`.
 2. Request body should contain object , its patch and the JWT as cookie as received in Authorization Step.
-   ```
+```
 {
     "patch": [
         {
@@ -57,7 +57,8 @@ If running on localhost:
             "phoneNumbers": []
         }
     }
-}   ```
+} 
+```
 
 
 3. In response we get the required object with the given patch applied.
