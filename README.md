@@ -91,8 +91,4 @@ If running on localhost:
 } 
 ```
 
-3. In response we get the required object with the given patch applied.
-
-```
-
-```
+3. In response we get the required Image of 50px * 50 px dimensions.

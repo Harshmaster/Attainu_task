@@ -47,8 +47,8 @@ router.post("/", (req, res) => {
       .toFile(`./Images/ResizedImages/${fileName}.png`)
       .then(function (newFileInfo) {
         console.log("Image Resized");
-        // SEND FILE IN RESPONSE
-        // res.sendFile("global");
+        res.sendFile(`/Images/ResizedImages/${fileName}.png`, { root: "." });
+        // res.sendFile(`${global}/Images/ResizedImages/${fileName}.png`);
       })
       .catch(function (err) {
         console.log(err.message);
