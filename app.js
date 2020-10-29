@@ -5,7 +5,6 @@ var app = express();
 var bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
-
 // BASIC SETTINGS
 // ==============
 app.use(cookieParser());
@@ -23,6 +22,18 @@ app.use("/resizeImage", imageResizeRoute);
 
 var patchObject = require("./Routes/jsonPatch");
 app.use("/applyPatch", patchObject);
+
+app.get("*", (req, res) => {
+  res.send("ERROR 404 NOT FOUND");
+});
+
+app.post("*", (req, res) => {
+  res.send("ERROR 404 NOT FOUND");
+});
+
+app.patch("*", (req, res) => {
+  res.send("ERROR 404 NOT FOUND");
+});
 
 // LISTENING TO SERVER
 // ===================
