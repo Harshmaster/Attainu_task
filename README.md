@@ -26,4 +26,40 @@ If running on localhost:
 
 # Apply JSON Patch
 
-# Create Image Thuumbnail
+If running on localhost:
+
+1. Send a PATCH request to `http://localhost:3000/applyPatch`.
+2. Request body should contain object , its patch and the JWT as cookie as received in Authorization Step.
+   ```
+{
+    "patch": [
+        {
+            "op": "replace",
+            "path": "/firstName",
+            "value": "Joachim"
+        },
+        {
+            "op": "add",
+            "path": "/lastName",
+            "value": "Wester"
+        },
+        {
+            "op": "add",
+            "path": "/contactDetails/phoneNumbers/0",
+            "value": {
+                "number": "555-123"
+            }
+        }
+    ],
+    "object": {
+        "firstName": "Albert",
+        "contactDetails": {
+            "phoneNumbers": []
+        }
+    }
+}
+```
+
+3. In response we get the required object with the given patch applied.
+
+# Create Image Thumbnail
