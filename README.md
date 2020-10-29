@@ -63,4 +63,36 @@ If running on localhost:
 
 3. In response we get the required object with the given patch applied.
 
+```
+    {
+    "firstName": "Joachim",
+    "contactDetails": {
+        "phoneNumbers": [
+            {
+                "number": "555-123"
+            }
+        ]
+    },
+    "lastName": "Wester"
+}
+
+```
+
 # Create Image Thumbnail
+
+
+If running on localhost:
+
+1. Send a POST request to `http://localhost:3000/resizeImage`.
+2. Request body should contain public image Url and the JWT as cookie as received in Authorization Step.
+```
+{
+    "imgUrl":"https://cdn.britannica.com/82/195482-050-2373E635/Amalfi-Italy.jpg",
+} 
+```
+
+3. In response we get the required object with the given patch applied.
+
+```
+
+```
